@@ -50,7 +50,7 @@ const Timeline = ({ rotation, totalFlightTime }) => {
   return (
     <> 
      <p className="text-black text-center">Daily Utilization: {utilizationPercentage.toFixed(2)}%</p>
-      <div className="relative h-14 w-full border-black border-4 bg-gray-200 rounded-lg mt-2">
+      <div className="relative h-14 w-full border-blue-800 border-4 rounded-lg mt-2">
         {segments.map((segment, index) => (
           <div
             key={index}
@@ -59,7 +59,7 @@ const Timeline = ({ rotation, totalFlightTime }) => {
                 ? "bg-green-500 border-green-800 border-2"
                 : segment.type === "turnaround"
                 ? "bg-red-500 border-red-800 border-2"
-                : "bg-gray-400"
+                : "bg-gray-700"
             }`}
             style={{
               left: `${(segment.start / totalSecondsInDay) * 100}%`,

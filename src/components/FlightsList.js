@@ -1,6 +1,6 @@
 const FlightsList = ({ flights, onSelect }) => {
     return (
-      <div className="w-1/4 p-4 bg-white shadow-md rounded-md max-h-[70vh] overflow-y-auto border-2 border-black">
+      <div className="w-1/4 p-4 bg-white shadow-md rounded-md max-h-[70vh] overflow-y-auto border-2 border-blue-400">
         <div className="border-white border-b-8">
 
         

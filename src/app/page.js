@@ -80,10 +80,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">
-        Aircraft Scheduling Hub
-      </h1>
+    <div className="min-h-screen md:mx-32 lg:mx-40 p-4">
+      <div className="flex justify-center">
+        <span className="text-2xl border px-4 rounded-lg border-blue-400 font-bold mb-4 text-center text-blue-950">
+          Aircraft Scheduling Hub
+        </span>
+      </div>
       <div className="flex justify-center">
         <DatePicker date={date} setDate={setDate} />
       </div>
@@ -93,11 +95,11 @@ export default function Home() {
           selectedAircraft={selectedAircraft}
           onSelect={handleAircraftSelect}
         />
-        <div className="w-1/2 bg-white shadow-md border-2 border-black rounded-md mx-4">
+        <div className="w-1/2 bg-white shadow-md border-2 border-blue-400 rounded-md mx-4">
           <RotationList
             onClear={handleClearRotation}
             rotation={rotations[selectedAircraft?.ident] || []}
-            selectedAircraft = {selectedAircraft}
+            selectedAircraft={selectedAircraft}
           />
         </div>
         <FlightsList flights={flights} onSelect={handleFlightSelect} />

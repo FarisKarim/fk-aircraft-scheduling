@@ -51,6 +51,6 @@ A application to manage aircraft scheduling for a list of flights
 - The application is designed for desktop devices only and so it is not responsive across devices.
 - The scheduling is limited to one day's worth of flights. If a different day is selected, all rotations for all aircrafts will reset.
 - Multiple aircraft can be assigned the same flight, allowing them to go to the same location during the same time if scheduling permits.
-
+- No functionality to check if planes are grounded at midnight is needed as there are no flights that are in the air during midnight.
 ## Demo
 https://fk-aircraft-scheduling.vercel.app/

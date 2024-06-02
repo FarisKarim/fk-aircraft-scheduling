@@ -16,7 +16,7 @@ const AircraftList = ({ aircrafts, selectedAircraft, onSelect }) => {
   };
 
   return (
-    <div className="w-1/4 p-4 bg-white shadow-md max-h-[70vh] border-2 border-black overflow-y-auto rounded-md">
+    <div className="w-1/4 p-4 bg-white shadow-md max-h-[70vh] border-2 border-blue-400 overflow-y-auto rounded-md">
       <h2 className="text-xl font-semibold mb-4">Aircrafts</h2>
       {aircrafts.map((aircraft) => (
         <div
