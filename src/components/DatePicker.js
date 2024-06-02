@@ -19,7 +19,7 @@ const DatePicker = ({ date, setDate }) => {
       >
         &lt;
       </button>
-      <span className="text-xl">{format(date, "yyyy-MM-dd")}</span>
+      <span className="text-lg">{format(date, "yyyy-MM-dd")}</span>
       <button
         onClick={increaseDate} // Right arrow increases date
         className="px-2 bg-white border-blue-400 border rounded-lg hover:bg-green-300"

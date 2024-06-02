@@ -17,12 +17,12 @@ const AircraftList = ({ aircrafts, selectedAircraft, onSelect }) => {
 
   return (
     <div className="w-1/4 p-4 bg-white shadow-md max-h-[70vh] border-2 border-blue-400 overflow-y-auto rounded-md">
-      <h2 className="text-xl font-semibold mb-4">Aircrafts</h2>
+      <h2 className="text-xl text-center font-semibold mb-4">Aircrafts</h2>
       {aircrafts.map((aircraft) => (
         <div
           key={aircraft.ident}
           onClick={() => onSelect(aircraft)}
-          className={`cursor-pointer mb-2 p-2 border rounded-md hover:bg-blue-200 ${
+          className={`cursor-pointer mb-2 p-2 border-black border rounded-md hover:bg-blue-200 ${
             selectedAircraft?.ident === aircraft.ident ? "bg-green-200 border-2 border-black" : ""
           }`}
         >

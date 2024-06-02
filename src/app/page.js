@@ -88,7 +88,7 @@ export default function Home() {
   return (
     <div className="min-h-screen md:mx-32 lg:mx-40 p-4">
       <div className="flex justify-center">
-        <span className="text-2xl border px-4 rounded-lg border-blue-400 font-bold mb-4 text-center text-blue-950">
+        <span className="text-2xl border-b-2 px-4 border-orange-400 text-blue-950 font-bold mb-4 text-center ">
           Aircraft Scheduling Hub
         </span>
       </div>
