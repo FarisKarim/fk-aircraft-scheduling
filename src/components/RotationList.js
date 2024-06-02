@@ -1,6 +1,7 @@
 import Timeline from "@/components/Timeline";
 
 const RotationList = ({ rotation, onClear, selectedAircraft }) => {
+
   // Calculate total flight time
   const totalFlightTime = rotation.reduce((total, flight) => {
     return total + (flight.arrivaltime - flight.departuretime);
@@ -13,7 +14,7 @@ const RotationList = ({ rotation, onClear, selectedAircraft }) => {
       <div className="flex justify-end">
         {(rotation.length > 0) && (
           <button
-            className="bg-red-500 text-white justify-end px-2 w-20 rounded-lg my-2 -mt-4 hover:bg-red-700"
+            className="bg-red-500 text-white text-sm justify-end px-2 w-20 rounded-lg my-2 -mt-4 hover:bg-red-700"
             onClick={onClear}
           >
             Clear all
@@ -51,7 +52,7 @@ const RotationList = ({ rotation, onClear, selectedAircraft }) => {
           // <button className="mt-4 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">
           //   Clear
           // </button>
-          <button className="mt-6 bg-green-600 text-white px-2 w-20 rounded-lg hover:bg-blue-700">
+          <button className="mt-6 bg-green-600 text-white text-sm px-2 w-20 rounded-lg hover:bg-blue-700">
             Save
           </button>
         )}

@@ -15,10 +15,13 @@ export default function Home() {
 
   const [date, setDate] = useState(new Date());
 
+  // Reset all rotations when the date is changed
   useEffect(() => {
     setRotations({});
   }, [date]);
 
+
+  // Fetch all required data when the components first rendered
   useEffect(() => {
     const fetchData = async () => {
       const aircraftsData = await getAircrafts();
@@ -30,6 +33,7 @@ export default function Home() {
     fetchData();
   }, []);
 
+  // Handler that clears the rotation of the selected aircraft, resetting to empty array
   const handleClearRotation = () => {
     if (selectedAircraft) {
       setRotations({
@@ -39,6 +43,7 @@ export default function Home() {
     }
   };
 
+  // Add a flight to the selected aircraft's rotation
   const handleFlightSelect = (flight) => {
     if (
       selectedAircraft &&
@@ -55,6 +60,7 @@ export default function Home() {
     }
   };
 
+  // Handler to select an aicraft
   const handleAircraftSelect = (aircraft) => {
     setSelectedAircraft(aircraft);
   };
@@ -91,18 +97,18 @@ export default function Home() {
       </div>
       <div className="flex h-full space-x-4">
         <AircraftList
-          aircrafts={aircrafts}
-          selectedAircraft={selectedAircraft}
-          onSelect={handleAircraftSelect}
+          aircrafts={aircrafts} // List of aircrafts
+          selectedAircraft={selectedAircraft} // Currently selectedAircraft
+          onSelect={handleAircraftSelect} // Handler to select aircraft
         />
         <div className="w-1/2 bg-white shadow-md border-2 border-blue-400 rounded-md mx-4">
           <RotationList
-            onClear={handleClearRotation}
-            rotation={rotations[selectedAircraft?.ident] || []}
-            selectedAircraft={selectedAircraft}
+            onClear={handleClearRotation} // Clear rotation of selected aircraft
+            rotation={rotations[selectedAircraft?.ident] || []} // Rotation list for the selected aircraft
+            selectedAircraft={selectedAircraft} // Currently selected aircraft
           />
         </div>
-        <FlightsList flights={flights} onSelect={handleFlightSelect} />
+        <FlightsList flights={flights} onSelect={handleFlightSelect} /> 
       </div>
     </div>
   );
